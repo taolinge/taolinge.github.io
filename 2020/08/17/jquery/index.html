@@ -1,0 +1,395 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>jquery - Hexo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="TaoLin,"> 
+    <meta name="description" content="jqueryjquery： javascript库
+write less  , do more
+下载的版本：
+jquery-3.3.1.min.js ：压缩版，发布版84.8KBjquery-3.3,"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/f.png"> 
+    
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 5.0.2"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Hexo</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://yoursite.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">jquery</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">jquery</h1>
+        <div class="stuff">
+            <span>八月 17, 2020</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/jquery/" rel="tag">-jquery</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <h1 id="jquery"><a href="#jquery" class="headerlink" title="jquery"></a>jquery</h1><p>jquery： javascript库</p>
+<p>write less  , do more</p>
+<p>下载的版本：</p>
+<p>jquery-3.3.1.min.js ：压缩版，发布版84.8KB<br>jquery-3.3.1.js ：常规版，开发版265KB </p>
+<p>开发工具：<br>    hbuilder   webstrom(推荐)  dreamweaver   idea</p>
+<pre><code>notepad++</code></pre>
+<p>使用：<br>    引入jquery</p>
+<p>html中 如果出错，不提示！<br>如果调试工具（F12）没有错误提示，但显示效果不一致，考虑html错误<br>常见错误：<br>引入js库时<br>必须是    </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;....&quot; &gt;</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>不能</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;...&quot; &#x2F;&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>​          $(dcument).ready(function(){})：初始化函数， 当网页中的dom元素（不包含图片、视频、资源）全部加载完毕后 立刻执行</p>
+<p>​        onload :  javascript，初始化函数，当网页中的dom元素（关联图片、视频、资源）全部加载完毕后 立刻执行</p>
+<p>jquery初始化函数简化：<br>        $(function(){…});</p>
+<p>​        $等价于jQuery<br>​            </p>
+<p>dom模型：<br>        将html  xml等文档结构的标签语言 看成dom模型<br>dom节点有三种类型：<br>        元素节点    <html>   <ul>… <p><br>        属性节点  ：title  src  alt …<br>        文本节点： 文本节点</p>
+<p>Dom对象：<br>    以上三种节点类型的具体对象 就是Dom对象。<br>    使用层面： 凡是JavaSCript能够直接操作的对象，就是Dom对象。<br>    例如，var title = document.getElementById(“myTitile”);通过js获取到的title对象 就是一个dom对象（就是<p>对象）</p>
+<p>jQuery对象：<br>    凡是jQuery能够直接操作的对象，就是jQuery对象。<br>    例如：var $title = $(“#myTitile”) ; 通过jquery获取到的 $title 就是一个jquery对象。<br>    同样一个元素，即可以成为一个dom对象（javascript对象），也可以成为一个jquery对象</p>
+<p>​        注意：dom对象 只适用于js的各种语法（函数、属性），jquery对象只用于jquery的各种语法（函数、属性）。<br>​        dom对象和jquery对象的各自独立。<br>例如<br>​    title 是dom对象，因此可以使用js属性或方法 title.innerHTML</p>
+<pre><code>$title 是jquery对象，因此可以使用jquery属性或方法  $title.html()</code></pre>
+<p>建议：<br>    js对象 直接写title<br>    jquery 加上$，例如$title</p>
+<p><img src="C:\Users\HP\Desktop\jQuery\dom模型.png" alt="dom模型"></p>
+<p>dom对象和jquery对象的转换：</p>
+<pre><code>title.innerHTML;
+tile -&gt;$title  
+$title.html();
+$title-&gt;title</code></pre>
+<p>​    dom对象-&gt;jquery对象 :jquery工厂，$(dom对象)<br>​<br>​    jquery对象 -&gt;dom对象：<br>​        基础：jquery对象默认是一个数组 或集合   ；dom对象默认是一个单独的对象</p>
+<pre><code>数组：jquery对象[0]
+集合：jquery对象.get(0)</code></pre>
+<p>**</p>
+<p><img src="C:\Users\HP\Desktop\jQuery\ready和onload.png" alt="ready和onload"></p>
+<p>Jquery选择器：jquery根基</p>
+<p>1基本选择器</p>
+<pre><code>标签选择器：
+        $(&quot;标签名&quot;)
+        $(&quot;p&quot;).html() 获取p标签对象，是jquery对象形式的
+        $(&quot;p&quot;).length
+类选择器：
+        $(&quot;.class值&quot;)
+id选择器
+        $(&quot;#id值&quot;)
+并集(或)选择器  逗号,
+        $(&quot;.class值,#id值&quot;)
+交集选择器（同时存在）    连续直接写
+    $(&quot;.class值#id值&quot;)
+    $(&quot;p.myStyle&quot;).html()：选中 即是p标签，并且class的值是myStyle
+    注意：不能出现歧义
+        错误写法 $(&quot;.myStylep&quot;).html()
+    交集选择器 在交接处 只能是.或#开头的选择器
+
+
+全局选择器：选中全部的元素
+    $(&quot;*&quot;)</code></pre>
+<p>2层次选择器（只取后面的那些元素）</p>
+<pre><code>相邻选择器 +
+        $(&quot;选择器1+选择器2&quot;)
+同辈选择器 ~    
+        $(&quot;选择器1~选择器2&quot;)
+后代选择器 空格
+        $(&quot;选择器1 选择器2&quot;)
+子代选择器 &gt;
+         $(&quot;选择器&gt;选择器2&quot;)</code></pre>
+<p>3属性选择器  [ … ]<br>    $(“[属性名]”)</p>
+<pre><code>$(&quot;[class]&quot;) :选中全部元素中 有class属性的 元素
+
+$(&quot;[属性名=属性值]&quot;)
+    $(&quot;[class=xxx]&quot;)  
+    $(&quot;[class=&#39;xxx&#39;]&quot;)    
+
+$(&quot;[class!=a]&quot;)  不等于， 包含两种： 有class但值不是a,   没有class
+
+$(&quot;[class^=a]&quot;)  class以a开头的元素
+$(&quot;[class$=a]&quot;)  class以a结尾的元素
+$(&quot;[class*=a]&quot;)  class有a的元素</code></pre>
+<p>4过滤选择器    :</p>
+<p>​    过滤选择器的一些方法 和其他函数类型，例如 $(“ul&gt;li:first”)等价于$(“ul&gt;li”).first()<br>​    有些不同，例如，  可以$(“ul&gt;li:odd”)    ；错误$(“ul&gt;li”).odd();</p>
+<p>a.基本过滤选择器（从0开始）</p>
+<p>:first：最开头那一个<br>:last：最后那一个<br>:even：偶数<br>:odd:奇数<br>:eq(index)：第index个</p>
+<p>:gt(index) : &gt;index的全部元素<br>:lt(index): &lt;index的全部元素<br>:not(选择器) :除了…以外<br>:header:选中所有的标题元素 h1 h2 <h1><br>:focus: 获取当前焦点的元素</p>
+<p>5.可见性选择器<br>    :visible ：选中所有可见的元素<br>    :hidden：选中所有隐藏的元素</p>
+<p>事件 ，事件函数（事件方法）<br>js: onXxx<br>    onclick();<br>    写在<script>内，ready()外；</p>
+<p>jquery:没有on<br>    click();<br>    ready()内；</p>
+<pre><code>ready(function()&#123;
+
+    $(选择器).事件类型(function()&#123;
+        ...
+    &#125;);
+&#125;);</code></pre>
+<p>windows事件：ready();<br>鼠标事件：<br>    click()：单击事件<br>    mouseover():鼠标悬浮<br>    mouseout():鼠标离开<br><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/html_ref_eventattributes.asp">http://www.w3school.com.cn/tags/html_ref_eventattributes.asp</a></p>
+<p>键盘事件：<br>    keydown():按键 从上往下的 过程<br>    keypress() ： 按键被压到 最底部<br>    keyup()：松开按键</p>
+<pre><code>1.前端的一些事件、方法，会在某些情况下失效。 2.兼容性问题</code></pre>
+<p>可以通过event.keyCode指定具体的按键</p>
+<pre><code>        $(&quot;body&quot;).keydown(function(event)&#123;
+            if(event.keyCode == 13)&#123;
+                alert(&quot;回车。。。...&quot;);
+            &#125;
+        &#125;);
+
+
+
+
+            $(&quot;body&quot;).keydown(function(event)&#123;
+                if(event.keyCode == 13)&#123;
+                    alert(&quot;回车。。。...&quot;);
+                &#125;
+            &#125;);
+
+
+            $(&quot;body&quot;).keyup(function()&#123;
+                alert(&quot;松开...&quot;);
+            &#125;);</code></pre>
+<p>​    </p>
+<p>表单事件<br>    focus()：获取焦点<br>    blur()：失去焦点</p>
+<p>颜色值：可以使用 英语单词 或者   #6位十六进制<br>        a. #000000:黑色   #ffffff:白色<br>        b. 如果6位 是两两相同的，则可以写成3位,#aabbcc 可以写成#abc</p>
+<p>绑定事件与移除事件<br>$(…).click(  function(){ … });<br>绑定事件<br>    $(…).bind(“事件名”,[数据],函数);<br>    $(…).bind(“click”,function(){ … });</p>
+<pre><code>$(...).bind(&quot;mouseover&quot;,function()&#123; ... &#125;);
+
+$(...).bind(&quot;focus&quot;,function()&#123; ... &#125;);
+
+
+批量绑定
+$(...).bind(&#123; &quot;事件名&quot;:函数   ,  &quot;事件名&quot;:函数 ,...,&quot;事件名&quot;:函数 &#125;) ;</code></pre>
+<p>移除事件：<br>        $(…).unbind(“事件名”);</p>
+<p>复合事件：<br>    hover(f1,f2)：切换使用mouseover()和mouseout()</p>
+<pre><code>toggle(f1,f2,f3,...,fn):版本问题(jquery1.9以前支持)
+    多个click()事件，toggle()还有其他含义（隐藏与显示）</code></pre>
+<p>显示效果（隐藏与显示）<br>    形式：hide([速度],[回调函数]);<br>        其中速度：可以是数字（毫秒），也可以是 单词（fast normal  slow，注意加双引号）</p>
+<pre><code>hide();隐藏
+show();显示
+toggle()：切换隐藏与显示
+
+    function myShow()
+        &#123;
+            //$(&quot;h3&quot;).show(&quot;normal&quot;,myCallBack) ;
+            //$(&quot;h3&quot;).fadeIn(5000) ;
+            $(&quot;h3&quot;).slideDown(5000);
+        &#125;
+
+
+        function myCallBack()
+        &#123;
+            alert(&quot;显示完毕...&quot;);
+        &#125;
+
+
+
+
+淡入淡出（透明度）
+fadeIn():淡入  显示
+fadeOut():淡出 隐藏
+
+注意是淡入 淡出
+
+控制高度
+slideDown():下拉，显示
+slideUp();上拉  隐藏</code></pre>
+<p>总结显示问题：<br>    显示：show()  fadeIn()  slideDown();<br>    隐藏：hide()    fadeOut()    slideUp();</p>
+<p>![20200709112659](C:\Users\HP\Documents\Tencent Files\784363882\Image\SharePic\20200709112659.png)</p>
+<p>操作DOM<br>    a.样式操作<br>            i.设置css()<br>                jquery对象.css(“属性名”,”属性值”);<br>                jquery对象.css({ “属性名”:”属性值”      ,”属性名”:”属性值” ,…,”属性名”:”属性值”     });<br>            ii.追加或移除样式class<br>                addClass(“x”);<br>                addClass(“x x x”);<br>                removeClass(x);<br>                removeClass(x x );<br>                removeClass():移除全部样式<br>                toggleClass(“x x x”):切换追加与移除</p>
+<p>b.内容操作<br>     html()：获取值 ，获取的是元素 的内容 ，包含了 元素内部的 各种标签<br>     html(xxxx) :先渲染，后显示</p>
+<p>​      text()：：获取值 ，值获取文本值<br>​      text(xxxx)：將值原样显示，没有渲染</p>
+<pre><code>  val()：获取value值
+  val(xxx)：设置value值</code></pre>
+<p>c.节点与属性操作<br>        i.节点操作<br>            ①查询节点  （jquery选择器）<br>            ②创建节点  ：  $()<br>                    $(选择器):获取节点<br>                    $(DOM对象)：转换<br>                    $(html字符串)，   $(“<li onclick="..">xxx</li>“)<br>        ③插入节点  文档<br>        ④替换节点<br>                    $X.replaceWith($Y)    ：用$Y替换$X<br>                    replaceAll();<br>        ⑤删除节点<br>                    remove()：彻底删除<br>                    detach()：将结点删除，但关联的事件、数据不会删除（不推荐使用）<br>                    empty()    ：只删除内容<br>        ⑥克隆节点<br>                    clone(true|false)<br>                    $(document).ready(function(){<br>                        $(“li”).click(function(){  … });<br>                    });            </p>
+<p>ii.属性操作<br>                attr(“属性名”) ：获取属性值</p>
+<p>​                attr(“属性名”,”属性值”) ：设置属性值<br>​                attr({ “属性名”:”属性值”,    “属性名”:”属性值” ,  “属性名”:”属性值” } );<br>​        删除属性值<br>​                removeAttr(“属性名”);</p>
+<p>d.获取集合与遍历集合<br>            子节点集合<br>                 $(…).children( “li”)<br>            后代集合(不推荐使用，影响性能)<br>                 $(…).find( “li”)</p>
+<p>同辈集合<br>            next()：后一个  +<br>            prev(): 前一个<br>            siblings()：同辈，左、右</p>
+<p>前辈<br>            parent():父代<br>            parents(“ul”):祖先</p>
+<p>过滤集合：<br>            i.很多方法的()就是一个过滤选择器<br>            ii.filter(“选择器…”);  </p>
+<p>遍历集合：<br>            $(…).each(function(index,element){</p>
+<p>​            });</p>
+<p>CSS-dom操作:<br>    height(500) ;<br>    width(500)</p>
+<p>​    offset()：偏移量（左上角的点）,left top<br>​    offset(function(n,oldOffset){   … })</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$(document).ready(function()&#123;&#x2F;&#x2F;初始化函数、就绪函数、加载函数</span><br><span class="line">        </span><br><span class="line">    </span><br><span class="line">         </span><br><span class="line">         var $myDivOffset &#x3D;  $(&quot;#divId2&quot;).offset(function(index, oldOffset)&#123;</span><br><span class="line">                var newOffset &#x3D; new Object() ;        </span><br><span class="line">                 newOffset.left &#x3D; oldOffset.left +100 ;</span><br><span class="line">                 newOffset.top &#x3D; oldOffset.top + 100 ;</span><br><span class="line">                return newOffset;</span><br><span class="line">         &#125;) ;</span><br><span class="line">         </span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<p>​    offsetParent()：获取  （已定位）的最近的祖先元素<br>​        已定位：元素position属性(默认static)被设置为了relative  absolute  或fixed  </p>
+<p>​    scrollLet()<br>​    scrollTop()</p>
+<p>重要：表单校验，可以减轻对服务端的访问次数</p>
+<p>​        a.获取要校验的元素值(选择器)    用户名、密码<br>​        b.通过 字符串处理方法、或者 正则表达式等手段 进行校验<br>​                “<a href="mailto:&#x61;&#x61;&#x61;&#64;&#x61;&#x62;&#x63;&#46;&#x63;&#111;&#109;">&#x61;&#x61;&#x61;&#64;&#x61;&#x62;&#x63;&#46;&#x63;&#111;&#109;</a>“.indexOf(“@”) !=-1<br>​        c.触发校验的方法或事件（校验时机）<br>​                blur()：失去焦点时触发<br>​                submit()：当点击表单的 “提交submit”按钮时 触发<br>​        </p>
+<pre><code>onblur=&quot;xxx()&quot;
+onsubmit=&quot;xx()&quot;</code></pre>
+<p>submit()或onsubmit的返回值 会决定表单是否跳转，如果返回true则正常跳转；如果返回false 则终止条件</p>
+<pre><code>在校验时建议的写法：
+if(....不合理的情况) alert() ; return false ;
+if(....不合理的情况) alert() ; return false ;
+if(....不合理的情况) alert() ; return false ;
+if(....不合理的情况) alert() ; return false ;
+
+return true ;</code></pre>
+<p><img src="C:\Users\HP\Desktop\jQuery\表单校验.png" alt="表单校验"></p>
+<p>正则表达式：用于定义规则<br>    email=”aaa” ;</p>
+<pre><code>正则表达式.test( email);    </code></pre>
+<p>使用：<br>    手写的正则表达式规则.test(校验的值) -&gt; true|false</p>
+<p>正则表达式 误区：有些时候完全没必要使用</p>
+<p>var reg=/^\w+@\w+.[a-zA-Z]{2,3}(.[a-zA-Z]{2,3})?$/;</p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="true">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='https://link.hhtjim.com/163/1466595872.mp3'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='https://link.hhtjim.com/163/1407551413.mp3'></li>
+                        
+                    
+                        
+                            <li title='2' data-url='https://link.hhtjim.com/163/1425814935.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='false'
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class='side'>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#jquery"><span class="toc-number">1.</span> <span class="toc-text">jquery</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">
+:focus: 获取当前焦点的元素</span></a></li></ol>	
+        </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>

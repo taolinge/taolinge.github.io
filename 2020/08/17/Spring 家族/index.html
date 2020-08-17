@@ -1,0 +1,1106 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Spring 家族 - Hexo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="TaoLin,"> 
+    <meta name="description" content="Spring 家族SpringSpring Ec篇
+搭建Spring环境
+
+5+1个jar
+
+spring-aop.jar 开发AOP特性时需要的JARspring-beans.jar 处理Bean,"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/f.png"> 
+    
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 5.0.2"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Hexo</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://yoursite.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">Spring 家族</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">Spring 家族</h1>
+        <div class="stuff">
+            <span>八月 17, 2020</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Spring/" rel="tag">-Spring</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <h1 id="Spring-家族"><a href="#Spring-家族" class="headerlink" title="Spring 家族"></a>Spring 家族</h1><h2 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h2><h3 id="Spring-Ec篇"><a href="#Spring-Ec篇" class="headerlink" title="Spring Ec篇"></a>Spring Ec篇</h3><ul>
+<li><p>搭建Spring环境</p>
+<ul>
+<li><p>5+1个jar</p>
+<ul>
+<li>spring-aop.jar 开发AOP特性时需要的JAR<br>spring-beans.jar 处理Bean的jar<br>spring-context.jar 处理spring上下文的jar<br>spring-core.jar spring核心jar<br>spring-expression.jar spring表达式<br>三方提供的日志jar<br>commons-logging.jar 日志</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>编写配置文件</p>
+<ul>
+<li>applicationContext.xml</li>
+</ul>
+</li>
+<li><p>开发Spring程序(IOC)</p>
+<ul>
+<li><p>ApplicationContext context = new ClassPathXmlApplicationContext(“applicationContext.xml”);</p>
+</li>
+<li><p>Ccontext.getBean()</p>
+</li>
+<li><p>依赖注入3种方式：</p>
+<ul>
+<li><p>set注入</p>
+<ul>
+<li><property name="sno" value="45">
+</li>
+</ul>
+</li>
+<li><p>构造器注入</p>
+<ul>
+<li><constructor-arg value="ls" type="String" index="0" name="name"></constructor-arg></li>
+</ul>
+</li>
+<li><p>p命名空间注入 </p>
+<ul>
+<li><bean class="org.lanqiao.entity.Course" p:courseHour="300" p:courseName="hadoop" p:teacher-ref="teacher">
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>value <value> 区别</p>
+</li>
+<li><p>注入各种集合数据类型: List Set map properties</p>
+<ul>
+<li><p>如果是null 直接写</p>
+<ul>
+<li><null>
+</li>
+</ul>
+</li>
+<li><p>空值</p>
+<ul>
+<li><value></value></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>自动装配</p>
+<ul>
+<li><p>（只适用于 ref类型 ）</p>
+<ul>
+<li>&lt;bean … class=”org.lanqiao.entity.Course”    autowire=”byName|byType|constructor|no”&gt;  </li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>注解</p>
+<ul>
+<li><p>@Component细化：</p>
+</li>
+<li><p>dao层注解：@Repository</p>
+</li>
+<li><p>service层注解：@Service</p>
+</li>
+<li><p>控制器层注解：@Controller</p>
+</li>
+<li><p>注意</p>
+<ul>
+<li><p>@Qualifier用处</p>
+<ul>
+<li>注入的时候可能发现有多个可注入对象，比如说一个Service接口有3个实现类，分别为impl1，impl2，impl3，你注入service的时候注入的是接口，那么就可以通过@Qualifier(“你要注入的bean的名称”)来选择注入对象。 </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>使用注解实现事务（声明式事务） </p>
+<ul>
+<li><p>1</p>
+<ul>
+<li>spring-tx-4.3.9.RELEASE<br>ojdbc.jar<br>commons-dbcp.jar 连接池使用到数据源<br>commons-pool.jar 连接池<br>spring-jdbc-4.3.9.RELEASE.jar<br>aopalliance.jar</li>
+</ul>
+</li>
+<li><p>2</p>
+<ul>
+<li><p>jdbc\mybatis\spring </p>
+</li>
+<li><p>增加事务tx的命名空间</p>
+<ul>
+<li><p>&lt;tx:annotation-driven</p>
+<ul>
+<li>transaction-manager=”transactionManager” /&gt;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>3</p>
+<ul>
+<li>将需要 成为事务的方法 前增加注解： </li>
+<li>@Transactional(readOnly=false,propagation=Propagation.REQUIRED)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>AOP：面向方面编程</p>
+<ul>
+<li>a.继承类 </li>
+<li>b.实现接口 </li>
+<li>c.注解 </li>
+<li>d.配置</li>
+</ul>
+</li>
+<li><p>通知 3种方法</p>
+<ul>
+<li><p>编码</p>
+<ul>
+<li><p>前置通知</p>
+<ul>
+<li>MethodBeforeAdvice</li>
+</ul>
+</li>
+<li><p>后置通知</p>
+<ul>
+<li>AfterReturningAdvice</li>
+</ul>
+</li>
+<li><p>异常通知</p>
+<ul>
+<li>ThrowsAdvice</li>
+</ul>
+</li>
+<li><p>环绕通知</p>
+<ul>
+<li>MethodInterceptor</li>
+</ul>
+</li>
+<li><p>aopaliance.jar </p>
+</li>
+<li><p>aspectjweaver.jar</p>
+</li>
+</ul>
+</li>
+<li><p>注解</p>
+<ul>
+<li><p>配置</p>
+<ul>
+<li>&lt; aop:aspectj-autoproxy&gt;&lt; /aop:aspectj-autoproxy&gt;</li>
+</ul>
+</li>
+<li><p>编写</p>
+<ul>
+<li>@Aspect //声明该类 是一个 通知 </li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>也不实现接口 </p>
+<ul>
+<li>在xml文件里配置</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>xml数据库的配置</p>
+<ul>
+<li><p>dataSource</p>
+<ul>
+<li><p>BasicDataSource</p>
+<ul>
+<li><p>里面配置name  password等</p>
+<ul>
+<li>配置数据源</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>DataSourceTransactionManager</p>
+<ul>
+<li>配置支持</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Spring-Idea篇"><a href="#Spring-Idea篇" class="headerlink" title="Spring Idea篇"></a>Spring Idea篇</h3><ul>
+<li><p>Spring Ioc容器</p>
+<ul>
+<li><p>取配置文件</p>
+<ul>
+<li><p>xml配置文件</p>
+<ul>
+<li>ApplicationContext context= new ClassPathXmlApplicationContext(“applicationContext.xml”); </li>
+</ul>
+</li>
+<li><p>注解</p>
+<ul>
+<li>ApplicationContext Context = new AnnotationConfigApplicationContext(config.class);</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>config类</p>
+<ul>
+<li><p>@Configuration</p>
+</li>
+<li><p>扫描</p>
+<ul>
+<li><p>@ComponentScan(value = {“dao”,”controller”,”ser”,”Config”,”lwz”} )</p>
+</li>
+<li><p>@ComponentScan(value = {“dao”,”controller”,”ser”} ,includeFilters ={@ComponentScan.Filter(type= FilterType.ANNOTATION,value= Service.class )} ,useDefaultFilters =false )</p>
+<ul>
+<li><p>有额外的属性</p>
+</li>
+<li><p>FilterType(ANNOTATION，ASSIGNABLE_TYPE，CUSTOM)</p>
+<ul>
+<li><p>ANNOTATION:Controller.clss 指的是 所有标有@Controller的类 </p>
+</li>
+<li><p>ASSIGNABLE_TYPE：值得是具体的一个类 StudentController.class</p>
+</li>
+<li><p>CUSTOM自定义：自己定义包含规则 </p>
+<ul>
+<li>implements TypeFilter</li>
+<li>MyFilter implements TypeFilter 重写其中的match，如果return true则加入IoC容器</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>excludeFilters：排除 </p>
+</li>
+<li><p>includeFilters：有默认行为，可以通过useDefaultFilters = false禁止</p>
+<ul>
+<li>也就是如上的 只想扫描包含xxx的类</li>
+</ul>
+</li>
+<li><p>或配置</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>bean的作用域</p>
+<ul>
+<li><p>scope: singleton | prototype </p>
+<ul>
+<li>singleton：容器在初始化时，就会创建对象（唯一的一个）；以后再getBean时，不再产生新的bean。singleton也支持延迟加载（懒加载）：在第一次使用时产生。 @Lazy </li>
+<li>prototype：容器在初始化时，不创建对象；只是在每次使用时（每次从容器获取对象时 ，context.getBean(Xxxx)）,再创建对象;并且 每次getBean()都会创建一个新的对象。</li>
+<li>@Scope(“prototype”)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>条件注解</p>
+<ul>
+<li>a.准备 bean </li>
+<li>b.增加条件Bean：给每个Bean设置条件 ，必须实现Condition接口 </li>
+<li>c.根据条件，加入IoC容器</li>
+</ul>
+</li>
+<li><p>Ioc加入Bean的方法 </p>
+<ul>
+<li><p>三层组件： 扫描器 + 三层注解 </p>
+</li>
+<li><p>非三层组件： </p>
+<ul>
+<li><p>① @Bean+返回值 </p>
+</li>
+<li><p>②@import </p>
+<ul>
+<li><p>①直接编写到@Import中，并且id值 是全类名 </p>
+</li>
+<li><p>②自定义ImportSelector接口的实现类，通过selectimports方法实现（方法的返回值 就是要纳入IoC容器的Bean） 。 并且 告知程序 自己编写的实现类</p>
+<ul>
+<li>public class MI implements ImportSelector </li>
+</ul>
+</li>
+<li><p>③编写ImportBeanDefinitionRegistrar接口的实现类，重写方法 </p>
+</li>
+</ul>
+</li>
+<li><p>③FactoryBean(工厂Bean)</p>
+<ul>
+<li>1.准备bean。实现类和重写方法 2.注册bean。注册到@Bean中 </li>
+<li>注意：需要通过&amp;区分 获取的对象是哪一个 ： 不加&amp;,获取的是最内部真实的Apple； </li>
+<li>如果加了&amp;，获取的 是FacotryBean</li>
+<li>public class MyF implements FactoryBean</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Bean的生命周期</p>
+<ul>
+<li><p>@Bean+返回值方式 </p>
+<ul>
+<li>xml: init-method=”myInit” destroy-method=”myDestroy” </li>
+<li>@Bean(value=”stu”,initMethod = “myInit”,destroyMethod = “myDestroy”)</li>
+</ul>
+</li>
+<li><p>JAVA规范 ：JSR250</p>
+<ul>
+<li>@Component注解、 给初始化方法加@PostConstruct、给销毁方法加@PreDestroy</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Autowired</p>
+<ul>
+<li><p>通过@Autowired从Ioc容器中 根据类型自动注入（没有调用setXxx()方法） </p>
+</li>
+<li><p>如果@Autowired在属性前标注，则不调用setXxx；如果标注在setXxx前面 ，则调用setXxx </p>
+</li>
+<li><p>1.如果有多个类型相同的，匹配哪个？ </p>
+<ul>
+<li>报错。 /默认值@primary </li>
+</ul>
+</li>
+<li><p>2.能否根据名字匹配？ </p>
+<ul>
+<li>可以，结合 @Qualifier(“stuDao2”)使用。 </li>
+</ul>
+</li>
+<li><p>3.如果有0个类型相同，默认报错；可以修改成不注入（null），@Autowired(required=false)</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Spring-MVC"><a href="#Spring-MVC" class="headerlink" title="Spring MVC"></a>Spring MVC</h2><h3 id="jar"><a href="#jar" class="headerlink" title="jar"></a>jar</h3><ul>
+<li>spring-aop.jar </li>
+<li>spring-bean.jar </li>
+<li>spring-context.jar </li>
+<li>spring-core.jar </li>
+<li>spring-web.jar </li>
+<li>spring-webmvc.jar </li>
+<li>commons-logging.jar</li>
+</ul>
+<h3 id="SpringMVC程序"><a href="#SpringMVC程序" class="headerlink" title="SpringMVC程序"></a>SpringMVC程序</h3><ul>
+<li>springmvc配置文件 springmvc.xml </li>
+<li>选中常用的命名空间：beans aop context mvc</li>
+</ul>
+<h3 id="ant风格的请求路径"><a href="#ant风格的请求路径" class="headerlink" title="ant风格的请求路径"></a>ant风格的请求路径</h3><ul>
+<li>? 单字符 </li>
+<li><ul>
+<li>任意个字符（0或多个） </li>
+</ul>
+</li>
+<li>** 任意目录</li>
+</ul>
+<h3 id="视图解析"><a href="#视图解析" class="headerlink" title="视图解析"></a>视图解析</h3><ul>
+<li>org.springframework.web.servlet.view.InternalResourceViewResolver</li>
+</ul>
+<h3 id="获取动态参数"><a href="#获取动态参数" class="headerlink" title="获取动态参数"></a>获取动态参数</h3><ul>
+<li><p>@PathVariable</p>
+</li>
+<li><p>使用对象（实体类Student）接受请求参数</p>
+<ul>
+<li><p>这个可以直接放进去用</p>
+<ul>
+<li>name<input type="text" name="name" ></li>
+<li>id<input type="text" name="id" ></li>
+<li><input type="text" name="ad.school" ></li>
+<li><input type="text" name="ad.home" >
+</li>
+</ul>
+</li>
+<li><p>@RequestParam(value = “id”) </p>
+</li>
+<li><p>@RequestParam(value = “name”,required = false ,defaultValue = “ls” ) String name</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="delete-put"><a href="#delete-put" class="headerlink" title="delete/put"></a>delete/put</h3><ul>
+<li><p>1.hidden 域 name =“_method”  value=”DELETE/PUT”</p>
+</li>
+<li><p>2.请求方式为put</p>
+</li>
+<li><p>记得增加过滤器</p>
+<ul>
+<li>org.springframework.web.filter.HiddenHttpMethodFilte</li>
+</ul>
+</li>
+</ul>
+<h3 id="REST风格-：软件编程风格"><a href="#REST风格-：软件编程风格" class="headerlink" title="REST风格 ：软件编程风格"></a>REST风格 ：软件编程风格</h3><h3 id="获取请求头信息-RequestHeader"><a href="#获取请求头信息-RequestHeader" class="headerlink" title="获取请求头信息 @RequestHeader"></a>获取请求头信息 @RequestHeader</h3><ul>
+<li>public String  testRequestHeader(@RequestHeader(“Accept-Language”)  String al  )</li>
+</ul>
+<h3 id="处理模型数据"><a href="#处理模型数据" class="headerlink" title="处理模型数据"></a>处理模型数据</h3><ul>
+<li><p>ModelAndView</p>
+<ul>
+<li>ModelAndView(“forward:/views/success.jsp”);</li>
+<li>ModelAndView(“redirect:/views/success.jsp”);</li>
+</ul>
+</li>
+<li><p>ModelMap </p>
+</li>
+<li><p>Map</p>
+</li>
+<li><p>Model </p>
+</li>
+<li><p>数据放在了request作用域</p>
+<ul>
+<li>如何将上述数据放入session中？@SessionAttributes(..)</li>
+</ul>
+</li>
+</ul>
+<h3 id="ModelAttribute"><a href="#ModelAttribute" class="headerlink" title="@ModelAttribute"></a>@ModelAttribute</h3><ul>
+<li><p>i.经常在 更新时使用</p>
+</li>
+<li><p>ii.在不改变原有代码的基础之上，插入一个新方法。</p>
+</li>
+<li><p>//在任何一次请求前，都会先执行@ModelAttribute修饰的方法</p>
+<ul>
+<li><p>map.put(“student”, student) ;//约定：map的key 就是方法参数 类型的首字母小写</p>
+<ul>
+<li><p>也可以自己写 写的话 在读取时候取值</p>
+<ul>
+<li>public String testModelAttribute(@ModelAttribute(“stu”)Student student) </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="视图、视图解析器"><a href="#视图、视图解析器" class="headerlink" title="视图、视图解析器"></a>视图、视图解析器</h3><ul>
+<li>视图的顶级接口:View </li>
+<li>视图解析器：ViewResolver</li>
+</ul>
+<h3 id="public-String-springmvcc12-student-s-BindingResult-r"><a href="#public-String-springmvcc12-student-s-BindingResult-r" class="headerlink" title="public String springmvcc12( student s,BindingResult r)"></a>public String springmvcc12( student s,BindingResult r)</h3><ul>
+<li>BindResult 可以将错误进行反应，进行打印</li>
+</ul>
+<h3 id="上传文件"><a href="#上传文件" class="headerlink" title="上传文件"></a>上传文件</h3><ul>
+<li><p>enctype=”multipart/form-data”</p>
+</li>
+<li><p>@RequestParam(“file”) MultipartFile file</p>
+</li>
+<li><p>a.jar包 </p>
+<ul>
+<li>commons-fileupload.jar、commons-io.ja</li>
+</ul>
+</li>
+<li><p>b.配置CommonsMultipartResolver </p>
+<ul>
+<li><p>将其加入SpringIOC容器</p>
+<ul>
+<li><bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+
+<ul>
+<li>springIoc容器在初始化时，会自动寻找一个Id=”multipartResolver”的bean，并将其加入Ioc容器</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="国际化"><a href="#国际化" class="headerlink" title="国际化"></a>国际化</h3><ul>
+<li><p>a.创建资源文件 </p>
+<ul>
+<li>i18n_zh_CH.properties </li>
+</ul>
+</li>
+<li><p>b.配置springmvc.xml，加载资源文件</p>
+<ul>
+<li><bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource"></li>
+<li>messageSource</li>
+<li><property name="basename" value="i18n"></property></li>
+</ul>
+</li>
+</ul>
+<h3 id="ctrl-shift-r-：自己编写的代码-java-jsp-html"><a href="#ctrl-shift-r-：自己编写的代码-java-jsp-html" class="headerlink" title="ctrl+shift+r ：自己编写的代码.java .jsp .html"></a>ctrl+shift+r ：自己编写的代码.java .jsp .html</h3><h3 id="ctrl-shift-t-：jar中的代码"><a href="#ctrl-shift-t-：jar中的代码" class="headerlink" title="ctrl+shift+t ：jar中的代码"></a>ctrl+shift+t ：jar中的代码</h3><h3 id="拦截器"><a href="#拦截器" class="headerlink" title="拦截器"></a>拦截器</h3><ul>
+<li><p>a.编写拦截器implements HandlerInterceptor </p>
+</li>
+<li><p>b.配置：将自己写的拦截器 配置到springmvc中（spring）</p>
+<ul>
+<li><!-- 配置具体的拦截路径 -->
+
+<ul>
+<li><p><a href="mvc:interceptor">mvc:interceptor</a></p>
+<ul>
+<li><!-- 指定拦截的路径,基于ant风格 -->
+
+<ul>
+<li><p>&lt;mvc:mapping path=”/**”/&gt;  </p>
+<ul>
+<li><!-- 指定拦不截的路径 --></li>
+<li>&lt;mvc:exclude-mapping path=”/handler/testUpload”/&gt; </li>
+<li><bean  class="org.lanqiao.interceptor.MyInterceptor"></bean></li>
+</ul>
+</li>
+<li><p></mvc:interceptor></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="ResponseStatusExceptionResolver：自定义异常显示页面-ResponseStatus"><a href="#ResponseStatusExceptionResolver：自定义异常显示页面-ResponseStatus" class="headerlink" title="ResponseStatusExceptionResolver：自定义异常显示页面 @ResponseStatus"></a>ResponseStatusExceptionResolver：自定义异常显示页面 @ResponseStatus</h3><ul>
+<li>@ResponseStatus(value=HttpStatus.FORBIDDEN,reason=”数组越界222!!!”)</li>
+<li>public class MyArrayIndexOutofBoundsException extends Exception </li>
+</ul>
+<h3 id="数据格式化"><a href="#数据格式化" class="headerlink" title="数据格式化"></a>数据格式化</h3><ul>
+<li><bean id="conversion" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+</bean></li>
+<li>@DateTimeFormat(pattern = “yyyy-MM-dd”)</li>
+</ul>
+<h3 id="lt-mvc-view-controller-path-”springmvcc10”-view-name-”success”-gt"><a href="#lt-mvc-view-controller-path-”springmvcc10”-view-name-”success”-gt" class="headerlink" title="&lt;mvc:view-controller path=”springmvcc10” view-name=”success”/&gt;"></a>&lt;mvc:view-controller path=”springmvcc10” view-name=”success”/&gt;</h3><ul>
+<li><p>不经过mvc，jsp直接到jsp，但可能导致错误，因为会直接把全部请求拦截</p>
+</li>
+<li><p><a href="mvc:annotation-driven">mvc:annotation-driven</a></mvc:annotation-driven></p>
+<ul>
+<li>协调器</li>
+</ul>
+</li>
+</ul>
+<h3 id="静态资源"><a href="#静态资源" class="headerlink" title="静态资源"></a>静态资源</h3><ul>
+<li><a href="mvc:default-servlet-handler">mvc:default-servlet-handler</a></mvc:default-servlet-handler></li>
+</ul>
+<h3 id="转换器"><a href="#转换器" class="headerlink" title="转换器"></a>转换器</h3><ul>
+<li><p>i.编写 自定义类型转器的类 （实现Converter接口）</p>
+</li>
+<li><p>ii.配置：将MyConverter加入到springmvc中</p>
+<ul>
+<li><!-- 1将 自定义转换器 纳入SpringIOC容器 --></li>
+<li><!-- 2将myConverter再纳入 SpringMVC提供的转换器Bean -->
+
+<ul>
+<li>org.springframework.context.support.ConversionServiceFactoryBean</li>
+</ul>
+</li>
+<li><!-- 3将conversionService注册到annotation-driven中 -->
+
+<ul>
+<li>&lt;mvc:annotation-driven conversion-service=”conversionService”&gt;</mvc:annotation-driven></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Mybatis-混入Spring-MVC"><a href="#Mybatis-混入Spring-MVC" class="headerlink" title="Mybatis 混入Spring MVC"></a>Mybatis 混入Spring MVC</h3><h2 id="Mybatis"><a href="#Mybatis" class="headerlink" title="Mybatis"></a>Mybatis</h2><h3 id="Mybatis——XML"><a href="#Mybatis——XML" class="headerlink" title="Mybatis——XML"></a>Mybatis——XML</h3><ul>
+<li><p>conf.xml文件</p>
+</li>
+<li><p>db.properties</p>
+<ul>
+<li><properties  resource="db.properties"/>
+</li>
+</ul>
+</li>
+<li><p>输入参数parameterType 和 输出参数resultType </p>
+<ul>
+<li><p>输入参数</p>
+<ul>
+<li><p>是简单类型（8个基本类型+String） 是可以使用任何占位符,#{xxxx} </p>
+<ul>
+<li>如果是对象类型，则必须是对象的属性 #{属性名}</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>输出参数</p>
+<ul>
+<li><p>如果返回值类型是一个 对象（如Student），则无论返回一个、还是多个， </p>
+<ul>
+<li>再resultType都写成org.lanqiao.entity.Student </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>注意事项</p>
+<ul>
+<li>如果使用的 事务方式为jdbc,则需要手工commit提交</li>
+</ul>
+</li>
+<li><p>动态代理方式的crud </p>
+<ul>
+<li>1.方法名和mapper.xml文件中标签的id值相同 </li>
+<li>2.方法的 输入参数 和mapper.xml文件中标签的 parameterType类型一致 (如果mapper.xml的标签中没有 parameterType，则说明方法没有输入参数) </li>
+<li>3.方法的返回值 和mapper.xml文件中标签的 resultType类型一致 （无论查询结果是一个 还是多个（student、List），在mapper.xml标签中的resultType中只写 一个（Student）；如果没有resultType，则说明方法的返回值为void）</li>
+</ul>
+</li>
+<li><p>别名 conf.xml </p>
+<ul>
+<li><p>单个别名</p>
+<ul>
+<li><typeAlias type="org.lanqiao.entity.Student" alias="student"/>
+</li>
+</ul>
+</li>
+<li><p>批量设置别名</p>
+<ul>
+<li><package name="org.lanqiao.entity"/>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>类型处理器</p>
+<ul>
+<li><p>创建转换器：需要实现TypeHandler接口 </p>
+<ul>
+<li>或者是继承BaseTypeHandler(一般就是继承子类就可以)</li>
+</ul>
+</li>
+<li><p>配置conf.xml</p>
+<ul>
+<li><typeHandler handler="org.lwz.converter.BooleanNumber"    javaType="Boolean"   jdbcType="INTEGER"/>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>resultMap</p>
+<ul>
+<li><p>1.类型转换 </p>
+</li>
+<li><p>2.属性-字段的映射关系</p>
+<ul>
+<li>分为主键id 和非主键 result</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>parameterType</p>
+<ul>
+<li><p>${},#{}的区别</p>
+<ul>
+<li>#{任意值} </li>
+<li>${value} ，其中的标识符只能是value</li>
+<li>#{}自动给String类型加上’’ （自动类型转换） </li>
+<li>${} 原样输出，但是适合于 动态排序（动态字段）</li>
+<li>#{}可以防止SQL注入 </li>
+<li>${}不防止</li>
+</ul>
+</li>
+<li><p>${},#{}的相同</p>
+<ul>
+<li><p>a.都可以 获取对象的值 （嵌套类型对象）</p>
+</li>
+<li><p>b.嵌套类型对象 </p>
+<ul>
+<li>支持级联属性 #,$都支持 </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>输出参数</p>
+<ul>
+<li><p>输出参数为实体对象类型 </p>
+</li>
+<li><p>输出参数为实体对象类型的集合 ：虽然输出类型为集合，但是resultType依然写 集合的元素类型（resyltType=”Student”） </p>
+</li>
+<li><p>输出参数类型为HashMap</p>
+<ul>
+<li>一个HashMap 对应一个学生的多个元素（多个属性） 【一个map，一个学生】</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>动态sql</p>
+<ul>
+<li><p>简单类型的数组</p>
+<ul>
+<li>必须用array代替该数组 </li>
+</ul>
+</li>
+<li><p>集合</p>
+<ul>
+<li>必须用list代替该数组</li>
+</ul>
+</li>
+<li><p>对象数组</p>
+<ul>
+<li>Object[]</li>
+</ul>
+</li>
+<li><p>sql片段</p>
+<ul>
+<li><include refid="sqltest"></include>//引入</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>一对一</p>
+<ul>
+<li><p>association</p>
+<ul>
+<li><p>属性类型</p>
+<ul>
+<li>JavaType</li>
+</ul>
+</li>
+<li><p>OfType</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>一对多</p>
+<ul>
+<li>collection</li>
+</ul>
+</li>
+</ul>
+<h3 id="Mybatis——注解"><a href="#Mybatis——注解" class="headerlink" title="Mybatis——注解"></a>Mybatis——注解</h3><ul>
+<li><p>a.将sql语句写在接口的方法上@Select(“”) ; </p>
+</li>
+<li><p>b.将接口的全类名 写入 “mapper标签中”，让mybatis知道sql语句此时是存储在接口中</p>
+</li>
+<li><p>注解/xml都支持批量引入</p>
+</li>
+<li><p>自动提交</p>
+<ul>
+<li>sessionFactory.openSession(true);</li>
+</ul>
+</li>
+<li><p>自增问题</p>
+<ul>
+<li><p>mysql支持自增 </p>
+<ul>
+<li><p>只需要配置两个属性即可</p>
+<ul>
+<li>useGeneratedKeys=”true” keyProperty=”stuNo”</li>
+<li><insert parameterType="com.yanqun.entity.Student" databaseId="mysql" useGeneratedKeys="true" keyProperty="stuNo">
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>oracle不支持自增 ：通过序列模拟实现</p>
+</li>
+</ul>
+</li>
+<li><p>别名问题 </p>
+<ul>
+<li><p>如果在批量设置别名时，出现了冲突。可以使用@Alias(“myStudent”)区分</p>
+<ul>
+<li>@Alias(“Myperson”)</li>
+<li>public class Person {</li>
+<li>}</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>SQL标签</p>
+<ul>
+<li>&lt; where&gt;可以处理拼接sql中 【开头】第一个and</li>
+<li>&lt; trim&gt;可以处理拼接sql中 【开头或结尾】第一个and </li>
+</ul>
+</li>
+</ul>
+<h2 id="SpringBoot"><a href="#SpringBoot" class="headerlink" title="SpringBoot"></a>SpringBoot</h2><h3 id="微服务"><a href="#微服务" class="headerlink" title="微服务"></a>微服务</h3><ul>
+<li>一个项目可以由多个小型服务构成</li>
+</ul>
+<h3 id="目录结构resources"><a href="#目录结构resources" class="headerlink" title="目录结构resources"></a>目录结构resources</h3><ul>
+<li>static:静态资源（js css 图片 音频 视频）</li>
+<li>templates：模板文件（模版引擎freemarker ,thymeleaf；默认不支持jsp）</li>
+<li>application.properties： 配置文件</li>
+</ul>
+<h3 id="SpringBootApplication"><a href="#SpringBootApplication" class="headerlink" title="@SpringBootApplication"></a>@SpringBootApplication</h3><ul>
+<li><p>@SpringBootConfiguration</p>
+<ul>
+<li><p>@Configuration</p>
+<ul>
+<li>1.该类是一个配置类</li>
+<li>2.加了@Configuration注解的类，会自动纳入Spring 容器 </li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>@EnableAutoConfiguration</p>
+<ul>
+<li>可以找到@SpringBootApplication所在类的包</li>
+</ul>
+</li>
+</ul>
+<h3 id="SpringBoot启动"><a href="#SpringBoot启动" class="headerlink" title="SpringBoot启动"></a>SpringBoot启动</h3><ul>
+<li>spring boot在启动时，会根据META-INF/spring.factories找到相应的三方依赖，并将这些依赖引入本项目</li>
+</ul>
+<h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><ul>
+<li><p>application.properties </p>
+<ul>
+<li>k=v,或行内写法(k： v，[Set/List/数组] {map,对象类型的属性}，并且 [ ]可省，{ }不能省) </li>
+</ul>
+</li>
+<li><p>application.yml </p>
+<ul>
+<li><ol>
+<li>k:空格v 2.通过垂直对齐 指定层次关系 3.默认可以不写引号； “ “会将其中的转义符进行转义，其他不会</li>
+</ol>
+</li>
+<li><p>yaml</p>
+<ul>
+<li><p>绑定</p>
+<ul>
+<li><p>@Component</p>
+</li>
+<li><p>@ConfigurationProperties(prefix=”student”)</p>
+<p>通过perfix进行绑定</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>绑定</p>
+<p>定:@ConfigurationProperties(yml/properties) @Value(“xx”) 二者可以互补</p>
+<pre><code>      @ConfigurationProperties  @Value </code></pre>
+<p>注值       批量注入                           单个 <br>松散语法  支持                              不支持 <br>SpEL        不支持                              支持 <br>JSR303 数据校验 支持                 不支持 <br>注入复杂类型 支持                      不支持</p>
+<ul>
+<li>简单类型：(8个基本类型/String/Date)</li>
+</ul>
+</li>
+</ul>
+<h3 id="PropertySource"><a href="#PropertySource" class="headerlink" title="@PropertySource"></a>@PropertySource</h3><ul>
+<li><p>默认会加载application.properties/application.yml文件中的数据</p>
+<p>@PropertySource(value={“classpath:conf.properties”})加载conf.properties文件中的数据；</p>
+</li>
+<li><p>@PropertySource只能加载properties，不能加载yml</p>
+</li>
+</ul>
+<h3 id="ImportResource"><a href="#ImportResource" class="headerlink" title="@ImportResource"></a>@ImportResource</h3><ul>
+<li><p>在spring boot主配置类上 通过@ImportResource指定配置文件的路径 </p>
+<p>@ImportResource(locations={“classpath:spring.xml”})<br>@SpringBootApplication</p>
+</li>
+</ul>
+<h3 id="占位符表达式"><a href="#占位符表达式" class="headerlink" title="占位符表达式"></a>占位符表达式</h3><p>student:name:${student.user.name}<br>    实际引用的是properties中的student.user.name=zl67<br>    yml中：<br>        student:<br>              name: ${student.user.name2:无名}</p>
+<ul>
+<li>随机数${random.uuid}等</li>
+<li>引用变量值 yml中</li>
+</ul>
+<h3 id="多环境的切换（profile）"><a href="#多环境的切换（profile）" class="headerlink" title="多环境的切换（profile）"></a>多环境的切换（profile）</h3><ul>
+<li><p>properties</p>
+<p>如果将application.properties注释掉，spring boot仍然会读取其他appilcation-环境名.properties中的配置。并且properties的优先级高于yml</p>
+<ul>
+<li>application-dev.properties8883<br>application-test.properties8884</li>
+<li>application.properties中指定：spring.profiles.active=环境名</li>
+</ul>
+</li>
+<li><p>yaml</p>
+</li>
+<li><p>动态切换环境</p>
+<ul>
+<li><p>通过运行参数指定环境</p>
+<ul>
+<li>–spring.profiles.active=环境名</li>
+<li>java -jar 项目名.jar –spring.profiles.active=环境名</li>
+</ul>
+</li>
+<li><p>通过vm参数指定环境</p>
+<ul>
+<li>-Dspring.profiles.active=环境名</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="配置文件位置"><a href="#配置文件位置" class="headerlink" title="配置文件位置"></a>配置文件位置</h3><ul>
+<li><p>项目外部的配置文件： (补救) </p>
+<ul>
+<li>在项目Run configuration ,argumenets: </li>
+</ul>
+</li>
+<li><p>-spring.config.location=D:/application.properties </p>
+</li>
+<li><p>项目运行参数： (补救) </p>
+<ul>
+<li>Run configuration ,argumenets: </li>
+</ul>
+</li>
+<li><p>-server.port=8883 </p>
+</li>
+<li><p>properties/yaml</p>
+<ul>
+<li><p>properties和yml中的配置，相互补充；如果冲突，则properties优先级高。 </p>
+</li>
+<li><p>存在于以下4个地方</p>
+<ul>
+<li>file:项目根目录/config application.properties </li>
+<li>file:项目根目录 application.properties </li>
+<li>classpath:项目根目录/config application.properties </li>
+<li>classpath:项目根目录 application.properties</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><em>XMind - Trial Version</em></p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="true">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='https://link.hhtjim.com/163/1466595872.mp3'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='https://link.hhtjim.com/163/1407551413.mp3'></li>
+                        
+                    
+                        
+                            <li title='2' data-url='https://link.hhtjim.com/163/1425814935.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='false'
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class='side'>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Spring-%E5%AE%B6%E6%97%8F"><span class="toc-number">1.</span> <span class="toc-text">Spring 家族</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring"><span class="toc-number">1.1.</span> <span class="toc-text">Spring</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring-Ec%E7%AF%87"><span class="toc-number">1.1.1.</span> <span class="toc-text">Spring Ec篇</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring-Idea%E7%AF%87"><span class="toc-number">1.1.2.</span> <span class="toc-text">Spring Idea篇</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring-MVC"><span class="toc-number">1.2.</span> <span class="toc-text">Spring MVC</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#jar"><span class="toc-number">1.2.1.</span> <span class="toc-text">jar</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SpringMVC%E7%A8%8B%E5%BA%8F"><span class="toc-number">1.2.2.</span> <span class="toc-text">SpringMVC程序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ant%E9%A3%8E%E6%A0%BC%E7%9A%84%E8%AF%B7%E6%B1%82%E8%B7%AF%E5%BE%84"><span class="toc-number">1.2.3.</span> <span class="toc-text">ant风格的请求路径</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%86%E5%9B%BE%E8%A7%A3%E6%9E%90"><span class="toc-number">1.2.4.</span> <span class="toc-text">视图解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E5%8A%A8%E6%80%81%E5%8F%82%E6%95%B0"><span class="toc-number">1.2.5.</span> <span class="toc-text">获取动态参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#delete-put"><span class="toc-number">1.2.6.</span> <span class="toc-text">delete&#x2F;put</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#REST%E9%A3%8E%E6%A0%BC-%EF%BC%9A%E8%BD%AF%E4%BB%B6%E7%BC%96%E7%A8%8B%E9%A3%8E%E6%A0%BC"><span class="toc-number">1.2.7.</span> <span class="toc-text">REST风格 ：软件编程风格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E8%AF%B7%E6%B1%82%E5%A4%B4%E4%BF%A1%E6%81%AF-RequestHeader"><span class="toc-number">1.2.8.</span> <span class="toc-text">获取请求头信息 @RequestHeader</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%84%E7%90%86%E6%A8%A1%E5%9E%8B%E6%95%B0%E6%8D%AE"><span class="toc-number">1.2.9.</span> <span class="toc-text">处理模型数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ModelAttribute"><span class="toc-number">1.2.10.</span> <span class="toc-text">@ModelAttribute</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%86%E5%9B%BE%E3%80%81%E8%A7%86%E5%9B%BE%E8%A7%A3%E6%9E%90%E5%99%A8"><span class="toc-number">1.2.11.</span> <span class="toc-text">视图、视图解析器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#public-String-springmvcc12-student-s-BindingResult-r"><span class="toc-number">1.2.12.</span> <span class="toc-text">public String springmvcc12( student s,BindingResult r)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6"><span class="toc-number">1.2.13.</span> <span class="toc-text">上传文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BD%E9%99%85%E5%8C%96"><span class="toc-number">1.2.14.</span> <span class="toc-text">国际化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ctrl-shift-r-%EF%BC%9A%E8%87%AA%E5%B7%B1%E7%BC%96%E5%86%99%E7%9A%84%E4%BB%A3%E7%A0%81-java-jsp-html"><span class="toc-number">1.2.15.</span> <span class="toc-text">ctrl+shift+r ：自己编写的代码.java .jsp .html</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ctrl-shift-t-%EF%BC%9Ajar%E4%B8%AD%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="toc-number">1.2.16.</span> <span class="toc-text">ctrl+shift+t ：jar中的代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8B%A6%E6%88%AA%E5%99%A8"><span class="toc-number">1.2.17.</span> <span class="toc-text">拦截器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ResponseStatusExceptionResolver%EF%BC%9A%E8%87%AA%E5%AE%9A%E4%B9%89%E5%BC%82%E5%B8%B8%E6%98%BE%E7%A4%BA%E9%A1%B5%E9%9D%A2-ResponseStatus"><span class="toc-number">1.2.18.</span> <span class="toc-text">ResponseStatusExceptionResolver：自定义异常显示页面 @ResponseStatus</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F%E5%8C%96"><span class="toc-number">1.2.19.</span> <span class="toc-text">数据格式化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#lt-mvc-view-controller-path-%E2%80%9Dspringmvcc10%E2%80%9D-view-name-%E2%80%9Dsuccess%E2%80%9D-gt"><span class="toc-number">1.2.20.</span> <span class="toc-text">&lt;mvc:view-controller path&#x3D;”springmvcc10” view-name&#x3D;”success”&#x2F;&gt;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90"><span class="toc-number">1.2.21.</span> <span class="toc-text">静态资源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AC%E6%8D%A2%E5%99%A8"><span class="toc-number">1.2.22.</span> <span class="toc-text">转换器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mybatis-%E6%B7%B7%E5%85%A5Spring-MVC"><span class="toc-number">1.2.23.</span> <span class="toc-text">Mybatis 混入Spring MVC</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mybatis"><span class="toc-number">1.3.</span> <span class="toc-text">Mybatis</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Mybatis%E2%80%94%E2%80%94XML"><span class="toc-number">1.3.1.</span> <span class="toc-text">Mybatis——XML</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mybatis%E2%80%94%E2%80%94%E6%B3%A8%E8%A7%A3"><span class="toc-number">1.3.2.</span> <span class="toc-text">Mybatis——注解</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SpringBoot"><span class="toc-number">1.4.</span> <span class="toc-text">SpringBoot</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AE%E6%9C%8D%E5%8A%A1"><span class="toc-number">1.4.1.</span> <span class="toc-text">微服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84resources"><span class="toc-number">1.4.2.</span> <span class="toc-text">目录结构resources</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SpringBootApplication"><span class="toc-number">1.4.3.</span> <span class="toc-text">@SpringBootApplication</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SpringBoot%E5%90%AF%E5%8A%A8"><span class="toc-number">1.4.4.</span> <span class="toc-text">SpringBoot启动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">1.4.5.</span> <span class="toc-text">配置文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PropertySource"><span class="toc-number">1.4.6.</span> <span class="toc-text">@PropertySource</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ImportResource"><span class="toc-number">1.4.7.</span> <span class="toc-text">@ImportResource</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%A0%E4%BD%8D%E7%AC%A6%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">1.4.8.</span> <span class="toc-text">占位符表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E7%8E%AF%E5%A2%83%E7%9A%84%E5%88%87%E6%8D%A2%EF%BC%88profile%EF%BC%89"><span class="toc-number">1.4.9.</span> <span class="toc-text">多环境的切换（profile）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%BD%8D%E7%BD%AE"><span class="toc-number">1.4.10.</span> <span class="toc-text">配置文件位置</span></a></li></ol></li></ol></li></ol>	
+        </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>

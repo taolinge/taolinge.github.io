@@ -1,0 +1,344 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>算法笔记 - Hexo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="TaoLin,"> 
+    <meta name="description" content="算法笔记二.​    1.C++标准中，stdio.h 更推荐等价写法 cstdio
+​    2.数据类型
+​            1.int 10的9次方        long long  ,"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/f.png"> 
+    
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 5.0.2"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Hexo</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://yoursite.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">算法笔记</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">算法笔记</h1>
+        <div class="stuff">
+            <span>八月 17, 2020</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">-算法</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <h1 id="算法笔记"><a href="#算法笔记" class="headerlink" title="算法笔记"></a>算法笔记</h1><h2 id="二"><a href="#二" class="headerlink" title="二."></a>二.</h2><p>​    1.C++标准中，stdio.h 更推荐等价写法 cstdio</p>
+<p>​    2.数据类型</p>
+<p>​            1.int 10的9次方        long long  10的18次方</p>
+<p>​            2.char类型 小写字母比大写字母ASCII大32</p>
+<p>​            3.bool在C++可以直接使用               C添加 stdbool.h</p>
+<p>3.定义常量 const  #define</p>
+<p>​        推荐const        #define 只是直接将对应的部分替换，然后才进行编译和运行</p>
+<p>4.scanf和printf</p>
+<p>​        scanf    </p>
+<p>​                1.除了char数组整个输入不加&amp;，其余类型都要加【也就是 %S 读入字符串 时候不加&amp;】</p>
+<p>​                2. long long %lld    double  %lf </p>
+<p>​        </p>
+<p>​        printf</p>
+<p>​                1.double %f</p>
+<p>​                2.   %md【空格补齐】   %0md 【0 补齐】   %.mf 【 保留xx位小数】   </p>
+<p>5.getchar         putchar </p>
+<p>6.math函数</p>
+<p>​        fabs(double x)  绝对值</p>
+<p>​        floor(double x)            ceil(double x)        向下取整                  向上取整</p>
+<p>​        pow(double r,double q)      r的q次</p>
+<p>​        sqrt(double x)    </p>
+<p>​        log(double x)          log e的对数</p>
+<p>​        round(double x) 四舍五入</p>
+<p>7.数组</p>
+<p>​        一般没有赋值都是随机值，所以要赋值可以{0} 都给个0  或者{ }什么都不写</p>
+<p>​            memset fill </p>
+<p>​        memset(数组名，值，sizeof(数组名))    【开头添加string.h】一般赋0 和 -1 因为memset 是 字节赋值</p>
+<p>8.gets / puts  </p>
+<p>​            gets 输入一行字符串 【识别 \n 作为输入结束】</p>
+<p>​            puts 输出一行字符串 并且接一个换行</p>
+<p>9.string.h</p>
+<p>​        strlen( 数组) 返回字符数组第一个\0以前的字符个数</p>
+<p>​        strcmp( 数组1，数组2)   返回字符串大小比较结果 比较原则是 按照字典顺序</p>
+<p>​        strcpy( 数组1，数组2) 复制给另一个数组，包括\0</p>
+<p>​        strcat( 数组1，数组2)  把2接到1后面</p>
+<p>10 . sscanf sprintf </p>
+<p>​            sscanf(screen,”%d”,&amp;n)      screen 输入到 n</p>
+<p>​            spcanf(screen,”%d”,n)        n 输入到 screen</p>
+<p>11.以数组作为函数参数</p>
+<p>​        注：如果是一维则不需要填写长度，二维则需要填写</p>
+<ol start="12">
+<li><p>引用</p>
+<p>​            a.常量不可以使用引用，引用的符号&amp;</p>
+</li>
+<li><p>结构体</p>
+<ol>
+<li>结构体里面能定义除了自己本身之外的任何数据类型。</li>
+<li>【虽然不能定义自己，但可以定义自己的指针】</li>
+</ol>
+</li>
+<li><p>浮点数的比较</p>
+<ol>
+<li>== 精度 pes 1e-8</li>
+<li>圆周率acos（-1.0）</li>
+<li><img src="C:\Users\HP\Desktop\image\5.png" alt="5"></li>
+</ol>
+</li>
+</ol>
+<p>12.复杂度</p>
+<p>​    </p>
+<h2 id="三"><a href="#三" class="headerlink" title="三"></a>三</h2><p>1.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main() &#123;</span><br><span class="line">    int a,sum;</span><br><span class="line">    sum&#x3D;0;</span><br><span class="line">    scanf(&quot;%d&quot;,&amp;a);</span><br><span class="line">    while(a!&#x3D;1) &#123;</span><br><span class="line"></span><br><span class="line">        if((a%2)&#x3D;&#x3D;0) &#123;</span><br><span class="line">            a&#x3D;a&#x2F;2;</span><br><span class="line"></span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            a&#x3D;(3*a)+1;</span><br><span class="line">            a&#x3D;a&#x2F;2;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        sum++;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    printf(&quot;%d&quot;,sum);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">const int max &#x3D;100;</span><br><span class="line">int sco[max]&#x3D; &#123;0&#125;;</span><br><span class="line">int main() &#123;</span><br><span class="line">    int n,id,sc;</span><br><span class="line">    scanf(&quot;%d&quot;,&amp;n);</span><br><span class="line">    while(n--) &#123;</span><br><span class="line">        scanf(&quot;%d%d&quot;,&amp;id,&amp;sc);</span><br><span class="line">        sco[id]+&#x3D;sc;</span><br><span class="line">    &#125;</span><br><span class="line">    int sum &#x3D; 0;</span><br><span class="line">    int idm&#x3D;0;</span><br><span class="line">    for(int i &#x3D; 0; i&lt;max; i++) &#123;</span><br><span class="line"></span><br><span class="line">        if(sco[i]&gt;sum) &#123;</span><br><span class="line">            sum&#x3D;sco[i];</span><br><span class="line">            idm&#x3D;i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    printf(&quot;%d %d&quot;,idm,sum);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">const int max &#x3D;200;</span><br><span class="line">int nu[max]&#x3D; &#123;0&#125;;</span><br><span class="line">int main() &#123;</span><br><span class="line">    int n&#x3D;0;</span><br><span class="line">    int i &#x3D;0 ;</span><br><span class="line">    int co&#x3D;0;</span><br><span class="line">    scanf(&quot;%d&quot;,&amp;n);</span><br><span class="line">    co&#x3D;n;</span><br><span class="line">    while(n--) &#123;</span><br><span class="line">        scanf(&quot;%d&quot;,&amp;nu[i]);</span><br><span class="line">        i++;</span><br><span class="line">    &#125;</span><br><span class="line">    int x &#x3D;0 ;</span><br><span class="line">    i&#x3D;0;</span><br><span class="line">    scanf(&quot;%d&quot;,&amp;x);</span><br><span class="line"></span><br><span class="line">    while(co--) &#123;</span><br><span class="line">        if(x&#x3D;&#x3D;nu[i]) &#123;</span><br><span class="line">            printf(&quot;%d&quot;,i);</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">        if(co&#x3D;&#x3D;0) &#123;</span><br><span class="line">            printf(&quot;-1&quot;);</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">        i++;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>​            注意      行间距比列间距要大  是本来就大 所以可以直接输出就行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">    int row,col;</span><br><span class="line">    char c;</span><br><span class="line">    scanf(&quot;%d %c&quot;,&amp;col,&amp;c);</span><br><span class="line">    if(col % 2 &#x3D;&#x3D;1) row &#x3D; col &#x2F;2 +1;</span><br><span class="line">    else row &#x3D; col &#x2F;2;</span><br><span class="line"></span><br><span class="line">    for(int i &#x3D; 0; i &lt; col; i++) &#123;</span><br><span class="line">        printf(&quot;%c&quot;,c);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    printf(&quot;\n&quot;);</span><br><span class="line"></span><br><span class="line">    for(int i &#x3D; 2; i&lt;row; i++) &#123;</span><br><span class="line">        printf(&quot;%c&quot;,c);</span><br><span class="line">        for(int j &#x3D; 0; j&lt;col-2; j++) &#123;</span><br><span class="line">            printf(&quot; &quot;);</span><br><span class="line">        &#125;</span><br><span class="line">        printf(&quot;%c\n&quot;,c);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    for(int i &#x3D; 0; i &lt; col; i++) &#123;</span><br><span class="line">        printf(&quot;%c&quot;,c);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>闰年</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">bool isLeap()&#123;</span><br><span class="line">    return (year % 4 &#x3D;&#x3D;0 &amp;&amp;  year %100 !&#x3D; 0) || (year % 400 &#x3D;&#x3D; 0);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> month[<span class="number">13</span>][<span class="number">2</span>]= &#123;</span><br><span class="line">    &#123;<span class="number">0</span>,<span class="number">0</span>&#125;,&#123;<span class="number">31</span>,<span class="number">31</span>&#125;,&#123;<span class="number">28</span>,<span class="number">29</span>&#125;,&#123;<span class="number">31</span>,<span class="number">31</span>&#125;,</span><br><span class="line">    &#123;<span class="number">30</span>,<span class="number">30</span>&#125;,&#123;<span class="number">31</span>,<span class="number">31</span>&#125;,&#123;<span class="number">30</span>,<span class="number">30</span>&#125;,&#123;<span class="number">31</span>,<span class="number">31</span>&#125;,</span><br><span class="line">    &#123;<span class="number">31</span>,<span class="number">31</span>&#125;,&#123;<span class="number">30</span>,<span class="number">30</span>&#125;,&#123;<span class="number">31</span>,<span class="number">31</span>&#125;,&#123;<span class="number">30</span>,<span class="number">30</span>&#125;,&#123;<span class="number">31</span>,<span class="number">31</span>&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isLeap</span><span class="params">(<span class="keyword">int</span> year)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (year % <span class="number">4</span> ==<span class="number">0</span> &amp;&amp;  year %<span class="number">100</span> != <span class="number">0</span>) || (year % <span class="number">400</span> == <span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> t1,y1,m1,d1;</span><br><span class="line">    <span class="keyword">int</span> t2,y2,m2,d2;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>,&amp;t1,&amp;t2) !=EOF) &#123;</span><br><span class="line">        <span class="keyword">if</span>(t1&gt;t2) &#123;</span><br><span class="line">            <span class="keyword">int</span> temp = t1;</span><br><span class="line">            t1=t2;</span><br><span class="line">            t2=temp;</span><br><span class="line">        &#125;</span><br><span class="line">        y1=t1/<span class="number">10000</span>;</span><br><span class="line">        m1=(t1%<span class="number">10000</span>)/<span class="number">100</span>;</span><br><span class="line">        d1=t1%<span class="number">100</span>;</span><br><span class="line">        y2=t2/<span class="number">10000</span>;</span><br><span class="line">        m2=(t2%<span class="number">10000</span>)/<span class="number">100</span>;</span><br><span class="line">        d2=t2%<span class="number">100</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> ans =<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(y1&lt;y2||m1&lt;m2||d1&lt;d2) &#123;</span><br><span class="line">            d1++;</span><br><span class="line">            <span class="keyword">if</span>(d1==month[m1][isLeap(y1)]+<span class="number">1</span>) &#123;</span><br><span class="line">                m1++;</span><br><span class="line">                d1=<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(m1==<span class="number">13</span>) &#123;</span><br><span class="line">                y1++;</span><br><span class="line">                m1=<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            ans++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,ans);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line"></span><br><span class="line">    int a,b,c;</span><br><span class="line">    scanf(&quot;%d%d%d&quot;,&amp;a,&amp;b,&amp;c);</span><br><span class="line">    int sum&#x3D;a+b;</span><br><span class="line">    int nu[100]&#x3D; &#123;0&#125;;</span><br><span class="line">    int i &#x3D; 0;</span><br><span class="line">    while(sum!&#x3D;0) &#123;</span><br><span class="line">        nu[i]&#x3D;sum%c;</span><br><span class="line">        sum&#x3D;sum&#x2F;c;</span><br><span class="line">        i++;</span><br><span class="line">    &#125;</span><br><span class="line">    for(i&#x3D;i-1; i&gt;&#x3D;0; i--) &#123;</span><br><span class="line">        printf(&quot;%d&quot;,nu[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>​    上面的这个       注意i=i-1         最后余数已经放进去了 但是还是加了一     所以先-1再进行计算</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">#include&lt;string.h&gt;</span><br><span class="line">int main() &#123;</span><br><span class="line">    char a[20];</span><br><span class="line">    int i &#x3D;1;</span><br><span class="line">    int w&#x3D;0;</span><br><span class="line">    bool re&#x3D;true;</span><br><span class="line"></span><br><span class="line">    while(gets(a)) &#123;</span><br><span class="line"></span><br><span class="line">        i&#x3D;strlen(a);</span><br><span class="line"></span><br><span class="line">        if(i%2&#x3D;&#x3D;0) &#123;</span><br><span class="line">            for(int m &#x3D; 0; m&lt;(i&#x2F;2); m++) &#123;</span><br><span class="line">                if(a[m]!&#x3D;a[i-m-1]) &#123;</span><br><span class="line">                    re&#x3D;false;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            for(int m&#x3D;0; m&lt;(i&#x2F;2); m++) &#123;</span><br><span class="line">                if(a[m]!&#x3D;a[i-m-1]) &#123;</span><br><span class="line">                    re&#x3D;false;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        if(re&#x3D;&#x3D;true) &#123;</span><br><span class="line">            printf(&quot;YES&quot;);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            printf(&quot;NO&quot;);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="四"><a href="#四" class="headerlink" title="四"></a>四</h1><h2 id=""><a href="#" class="headerlink" title=""></a></h2><p>1.选择排序</p>
+<p>2.直接插入排序</p>
+<hr>
+<h1 id="六"><a href="#六" class="headerlink" title="六"></a>六</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">#include&lt;vector&gt;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line">int main() &#123;</span><br><span class="line">    vector&lt;int&gt; vi;</span><br><span class="line">    for(int i &#x3D; 1; i&lt;&#x3D;5; i++) &#123;</span><br><span class="line">        vi.push_back(i);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    vi.pop_back();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;vector 的访问 1.下标 2.迭代器</span><br><span class="line">    printf(&quot;%d\n&quot;,vi[0]);</span><br><span class="line"></span><br><span class="line">    for(vector&lt;int&gt;::iterator it &#x3D; vi.begin(); it!&#x3D;vi.end(); it++) &#123;</span><br><span class="line">        printf(&quot;%d &quot;,*it);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    printf(&quot;size&#x3D;%d\n&quot;,vi.size());</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;    vi.clear();</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;        for(vector&lt;int&gt;::iterator it &#x3D; vi.begin();it!&#x3D;vi.end();it++)&#123;</span><br><span class="line">&#x2F;&#x2F;        printf(&quot;%d &quot;,*it);</span><br><span class="line">&#x2F;&#x2F;    &#125;</span><br><span class="line"></span><br><span class="line">    vi.insert(vi.begin(),-1);</span><br><span class="line"></span><br><span class="line">    for(vector&lt;int&gt;::iterator it &#x3D; vi.begin(); it!&#x3D;vi.end(); it++) &#123;</span><br><span class="line">        printf(&quot;%d &quot;,*it);</span><br><span class="line">    &#125;</span><br><span class="line">    printf(&quot;\n&quot;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    vi.erase(vi.begin());</span><br><span class="line"></span><br><span class="line">    for(vector&lt;int&gt;::iterator it &#x3D; vi.begin(); it!&#x3D;vi.end(); it++) &#123;</span><br><span class="line">        printf(&quot;%d &quot;,*it);</span><br><span class="line">    &#125;</span><br><span class="line">    printf(&quot;\n&quot;);</span><br><span class="line"></span><br><span class="line">    vi.erase(vi.begin(),vi.begin()+1);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    for(vector&lt;int&gt;::iterator it &#x3D; vi.begin(); it!&#x3D;vi.end(); it++) &#123;</span><br><span class="line">        printf(&quot;%d &quot;,*it);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<hr>
+<p>分数约分</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"> </span><br><span class="line">&#x2F;&#x2F;递归求出分子和分母的最大公约数 </span><br><span class="line">int Gcd(int m,int n)&#123;</span><br><span class="line">    if(n&#x3D;&#x3D;0) return m;</span><br><span class="line">    return Gcd(n,m%n);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">int main()&#123;</span><br><span class="line">    int a,b;</span><br><span class="line">    char op;</span><br><span class="line">    scanf(&quot;%d%c%d&quot;,&amp;a,&amp;op,&amp;b);</span><br><span class="line">    cout&lt;&lt;a&lt;&lt;&quot;&#x2F;&quot;&lt;&lt;b&lt;&lt;&quot;的最简分数为：&quot;; </span><br><span class="line">    cout&lt;&lt;a&#x2F;Gcd(a,b)&lt;&lt;&quot;&#x2F;&quot;&lt;&lt;b&#x2F;Gcd(a,b)&lt;&lt;endl;</span><br><span class="line">    return 0;</span><br><span class="line">    </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="C:\Users\HP\Desktop\md\image\10.png" alt="10"></p>
+<hr>
+<p>高精度</p>
+<h2 id="高精度加法"><a href="#高精度加法" class="headerlink" title="高精度加法#"></a>高精度加法<a target="_blank" rel="noopener" href="https://www.cnblogs.com/LJA001162/p/11033146.html#878488249">#</a></h2><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述#"></a>题目描述<a target="_blank" rel="noopener" href="https://www.cnblogs.com/LJA001162/p/11033146.html#467534763">#</a></h3><p>输入两个大整数a，b，输出他们的和。（1&lt;=a,b&lt;=10的100次方）</p>
+<h3 id="输入"><a href="#输入" class="headerlink" title="输入#"></a>输入<a target="_blank" rel="noopener" href="https://www.cnblogs.com/LJA001162/p/11033146.html#2300258541">#</a></h3><p>输入两个大整数a和b。</p>
+<h3 id="输出"><a href="#输出" class="headerlink" title="输出#"></a>输出<a target="_blank" rel="noopener" href="https://www.cnblogs.com/LJA001162/p/11033146.html#2116050748">#</a></h3><p>输入a加b的和。</p>
+<h3 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入#"></a>样例输入<a target="_blank" rel="noopener" href="https://www.cnblogs.com/LJA001162/p/11033146.html#1820637776">#</a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Copy43434343445435343  32435647668754353</span><br></pre></td></tr></table></figure>
+
+<h3 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出#"></a>样例输出<a target="_blank" rel="noopener" href="https://www.cnblogs.com/LJA001162/p/11033146.html#2476870011">#</a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Copy75869991114189696</span><br></pre></td></tr></table></figure>
+
+<h3 id="程序-注释"><a href="#程序-注释" class="headerlink" title="程序+注释#"></a>程序+注释<a target="_blank" rel="noopener" href="https://www.cnblogs.com/LJA001162/p/11033146.html#3907300329">#</a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">Copy#include &lt;bits&#x2F;stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">char al[100],bl[100]; </span><br><span class="line">int a[100],b[100],c[100];</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    scanf(&quot;%s&quot;,al);&#x2F;&#x2F;不能用gets </span><br><span class="line">    scanf(&quot;%s&quot;,bl);&#x2F;&#x2F;因为这两个数之间只有一个空格 </span><br><span class="line">    int lena,lenb,lenc,x &#x3D; 0;&#x2F;&#x2F;x代表进位</span><br><span class="line">    lena &#x3D; strlen(al);&#x2F;&#x2F;lena是al数组的长度 </span><br><span class="line">    lenb &#x3D; strlen(bl);&#x2F;&#x2F;lenb是bl数组的长度 </span><br><span class="line">    for (int i &#x3D; 0;i &lt;&#x3D; lena - 1;i ++)&#x2F;&#x2F;把这个数字反着存储 al里的123就是a里面的321 </span><br><span class="line">        a[lena - i] &#x3D; al[i] - &#39;0&#39;;</span><br><span class="line">    for (int i &#x3D; 0;i &lt;&#x3D; lenb - 1;i ++)&#x2F;&#x2F;这个也是 </span><br><span class="line">        b[lenb - i] &#x3D; bl[i] - &#39;0&#39;;</span><br><span class="line">    lenc &#x3D; 1;&#x2F;&#x2F;循环变量 </span><br><span class="line">    while ((lenc &lt;&#x3D; lena) || (lenc &lt;&#x3D; lenb))&#x2F;&#x2F;循环直到lenc等于al或者bl的长度 </span><br><span class="line">    &#123;</span><br><span class="line">        c[lenc] &#x3D; a[lenc] + b[lenc] + x;&#x2F;&#x2F;（核心）把这两个数字加起来，并且加上进位 </span><br><span class="line">        x &#x3D; c[lenc] &#x2F; 10;&#x2F;&#x2F;如果两个数加起来大于10，x就是1，否则取余的结果就是 0 </span><br><span class="line">        c[lenc] &#x3D; c[lenc] % 10;&#x2F;&#x2F; </span><br><span class="line">        lenc ++;&#x2F;&#x2F;自增 1  </span><br><span class="line">    &#125;</span><br><span class="line">    c[lenc] &#x3D; x;&#x2F;*把最后一位进位过来*&#x2F; </span><br><span class="line">    while (c[lenc] &#x3D;&#x3D; 0)&#x2F;&#x2F;如果最后一位为零 </span><br><span class="line">    &#123;</span><br><span class="line">        lenc --;&#x2F;&#x2F;把最后一位不输出  </span><br><span class="line">    &#125;</span><br><span class="line">    for (int i &#x3D; lenc;i &gt;&#x3D; 1;i --)&#x2F;&#x2F;输出 </span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; c[i];</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; endl;&#x2F;&#x2F;回车 </span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="高精度减法"><a href="#高精度减法" class="headerlink" title="高精度减法#"></a>高精度减法<a target="_blank" rel="noopener" href="https://www.cnblogs.com/LJA001162/p/11033146.html#3476226410">#</a></h2><h3 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述#"></a>题目描述<a target="_blank" rel="noopener" href="https://www.cnblogs.com/LJA001162/p/11033146.html#3132269910">#</a></h3><p>输入两个大整数a，b，输出他们的差。（1&lt;=a,b&lt;=10的100次方）</p>
+<h3 id="输入-1"><a href="#输入-1" class="headerlink" title="输入#"></a>输入<a target="_blank" rel="noopener" href="https://www.cnblogs.com/LJA001162/p/11033146.html#1052985769">#</a></h3><p>输入两个大整数a和b。</p>
+<h3 id="输出-1"><a href="#输出-1" class="headerlink" title="输出#"></a>输出<a target="_blank" rel="noopener" href="https://www.cnblogs.com/LJA001162/p/11033146.html#398980893">#</a></h3><p>输入a减b的差。</p>
+<h3 id="样例输入-1"><a href="#样例输入-1" class="headerlink" title="样例输入#"></a>样例输入<a target="_blank" rel="noopener" href="https://www.cnblogs.com/LJA001162/p/11033146.html#2557791204">#</a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Copy35 45</span><br></pre></td></tr></table></figure>
+
+<h3 id="样例输出-1"><a href="#样例输出-1" class="headerlink" title="样例输出#"></a>样例输出<a target="_blank" rel="noopener" href="https://www.cnblogs.com/LJA001162/p/11033146.html#4121832898">#</a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Copy-10</span><br></pre></td></tr></table></figure>
+
+<h3 id="程序-注释-1"><a href="#程序-注释-1" class="headerlink" title="程序+注释#"></a>程序+注释<a target="_blank" rel="noopener" href="https://www.cnblogs.com/LJA001162/p/11033146.html#1089656307">#</a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">Copy#include &lt;bits&#x2F;stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">char s1[1000],s2[1000];</span><br><span class="line">int a[1000],b[1000],c[1000];</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    char n[1000];</span><br><span class="line">    scanf(&quot;%s %s&quot;,s1,s2);&#x2F;&#x2F;也不能用gets </span><br><span class="line">    if (strlen(s1) &lt; strlen(s2) || strlen(s1) &#x3D;&#x3D; strlen(s2) &amp;&amp; strcmp(s1,s1) &lt; 0)&#x2F;&#x2F; 如果减数 大于 被减数 </span><br><span class="line">    &#123;</span><br><span class="line">        strcpy(n,s1);strcpy(s1,s2);strcpy(s2,n);&#x2F;&#x2F;把s1 和 s2 交换 </span><br><span class="line">        printf(&quot;-&quot;);&#x2F;&#x2F;打印出“- ” 这个符号 </span><br><span class="line">    &#125;</span><br><span class="line">    int len1 &#x3D; strlen(s1);&#x2F;&#x2F;s1 的长度  </span><br><span class="line">    int len2 &#x3D; strlen(s2);&#x2F;&#x2F;s2 的长度 </span><br><span class="line">    for (int i &#x3D; len1 - 1;i &gt;&#x3D; 0;i --)&#x2F;&#x2F;反着存储 </span><br><span class="line">    &#123;</span><br><span class="line">        a[len1 - (i + 1) + 1] &#x3D; s1[i] - &#39;0&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">    for (int i &#x3D; len2 - 1;i &gt;&#x3D; 0;i --)&#x2F;&#x2F;反着存储 </span><br><span class="line">    &#123;</span><br><span class="line">        b[len2 - (i + 1) + 1] &#x3D; s2[i] - &#39;0&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">    for (int i &#x3D; 1;i &lt;&#x3D; len1;i ++)</span><br><span class="line">    &#123;</span><br><span class="line">        a[i] &#x3D; a[i] - b[i];&#x2F;&#x2F;标准减法，把 a[i] - b[i] 的结果存在 a[i] 里面 </span><br><span class="line">        if (a[i] &lt; 0)&#x2F;&#x2F;退位  </span><br><span class="line">        &#123;</span><br><span class="line">            a[i] &#x3D; a[i] + 10; </span><br><span class="line">            a[i + 1] --; &#x2F;&#x2F;后面的一位自减1 </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    while (a[len1] &#x3D;&#x3D; 0)&#x2F;&#x2F;如果最后一位为零 </span><br><span class="line">    &#123;</span><br><span class="line">        len1 --;&#x2F;&#x2F;把最后一位不输出 </span><br><span class="line">    &#125; </span><br><span class="line">    for (int i &#x3D; len1;i &gt;&#x3D; 1;i --)&#x2F;&#x2F;输出 </span><br><span class="line">    &#123;</span><br><span class="line">        printf (&quot;%d&quot;,a[i]);&#x2F;&#x2F;输出 </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h2 id="题目描述-2"><a href="#题目描述-2" class="headerlink" title="题目描述"></a>题目描述</h2><p>用高精度计算出S=1!+2!+3!+…+n! (n≤50)<em>S</em>=1!+2!+3!+…+<em>n</em>!(<em>n</em>≤50)</p>
+<p>其中“!”表示阶乘，例如：5!=5 \times 4 \times 3 \times 2 \times 15!=5×4×3×2×1。</p>
+<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>一个正整数N<em>N</em>。</p>
+<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2><p>一个正整数S<em>S</em>，表示计算结果。</p>
+<h2 id="输入输出样例"><a href="#输入输出样例" class="headerlink" title="输入输出样例"></a>输入输出样例</h2><p><strong>输入 #1</strong>复制</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
+
+<p><strong>输出 #1</strong>复制</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">9</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits&#x2F;stdc++.h&gt;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int a[2000];</span><br><span class="line">int c[2000];</span><br><span class="line"></span><br><span class="line">void pplus(int *a,int *c) &#123;</span><br><span class="line">    int jw&#x3D;0;</span><br><span class="line">    for(int i&#x3D;1; i&lt;&#x3D;1000; i++) &#123;</span><br><span class="line">        c[i]+&#x3D;a[i]+jw;</span><br><span class="line">        jw&#x3D;c[i]&#x2F;10;</span><br><span class="line">        c[i]%&#x3D;10;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void cheng(int *a,int c) &#123;</span><br><span class="line">    int jw&#x3D;0;</span><br><span class="line">    for(int i&#x3D;1; i&lt;&#x3D;1000; i++) &#123;</span><br><span class="line">        a[i]&#x3D;a[i]*c+jw;</span><br><span class="line">        jw&#x3D;a[i]&#x2F;10;</span><br><span class="line">        a[i]%&#x3D;10;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">    int n;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    a[1]&#x3D;1;</span><br><span class="line">    for(int i&#x3D;1; i&lt;&#x3D;n; i++) &#123;</span><br><span class="line">        cheng(a,i);</span><br><span class="line">        pplus(a,c);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    bool flag&#x3D;0;</span><br><span class="line">    for(int i &#x3D; 1000; i&gt;&#x3D;1; i--) &#123;</span><br><span class="line">        if(c[i]!&#x3D;0) flag&#x3D;1;</span><br><span class="line">        if(flag) cout&lt;&lt;c[i];</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<hr>
+<h2 id="输入格式-1"><a href="#输入格式-1" class="headerlink" title="输入格式"></a>输入格式</h2><p>每个输入文件包含若干行字符串，字符串有大写的W、L和E组成。其中E<em>E</em>表示比赛信息结束，程序应该忽略E之后的所有内容。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits&#x2F;stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">char ch,s[62510]&#x2F;&#x2F;至于为什么是62510看说明提示;</span><br><span class="line">int a,b,emm&#x2F;&#x2F;emm表示分数总数量（同时也是下标）a,b下文会讲;</span><br><span class="line">int main()&#123;</span><br><span class="line">    while(cin&gt;&gt;ch)&#123;&#x2F;&#x2F;一直输入</span><br><span class="line">        if(ch&#x3D;&#x3D;&#39;E&#39;)break;&#x2F;&#x2F;如果是E就结束（防止E不是最后一个字符这一情况发生）</span><br><span class="line">        else s[++emm]&#x3D;ch;&#x2F;&#x2F;存入字符数组中</span><br><span class="line">    &#125;</span><br><span class="line">      &#x2F;&#x2F;awa</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="true">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='https://link.hhtjim.com/163/1466595872.mp3'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='https://link.hhtjim.com/163/1407551413.mp3'></li>
+                        
+                    
+                        
+                            <li title='2' data-url='https://link.hhtjim.com/163/1425814935.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='false'
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class='side'>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0"><span class="toc-number">1.</span> <span class="toc-text">算法笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C"><span class="toc-number">1.1.</span> <span class="toc-text">二.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89"><span class="toc-number">1.2.</span> <span class="toc-text">三</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B"><span class="toc-number">2.</span> <span class="toc-text">四</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">2.1.</span> <span class="toc-text"></span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AD"><span class="toc-number">3.</span> <span class="toc-text">六</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AB%98%E7%B2%BE%E5%BA%A6%E5%8A%A0%E6%B3%95"><span class="toc-number">3.1.</span> <span class="toc-text">高精度加法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="toc-number">3.1.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5"><span class="toc-number">3.1.2.</span> <span class="toc-text">输入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA"><span class="toc-number">3.1.3.</span> <span class="toc-text">输出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%85%A5"><span class="toc-number">3.1.4.</span> <span class="toc-text">样例输入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%87%BA"><span class="toc-number">3.1.5.</span> <span class="toc-text">样例输出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F-%E6%B3%A8%E9%87%8A"><span class="toc-number">3.1.6.</span> <span class="toc-text">程序+注释</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AB%98%E7%B2%BE%E5%BA%A6%E5%87%8F%E6%B3%95"><span class="toc-number">3.2.</span> <span class="toc-text">高精度减法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-1"><span class="toc-number">3.2.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5-1"><span class="toc-number">3.2.2.</span> <span class="toc-text">输入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA-1"><span class="toc-number">3.2.3.</span> <span class="toc-text">输出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%85%A5-1"><span class="toc-number">3.2.4.</span> <span class="toc-text">样例输入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%87%BA-1"><span class="toc-number">3.2.5.</span> <span class="toc-text">样例输出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F-%E6%B3%A8%E9%87%8A-1"><span class="toc-number">3.2.6.</span> <span class="toc-text">程序+注释</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-2"><span class="toc-number">3.3.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F"><span class="toc-number">3.4.</span> <span class="toc-text">输入格式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F"><span class="toc-number">3.5.</span> <span class="toc-text">输出格式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B"><span class="toc-number">3.6.</span> <span class="toc-text">输入输出样例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F-1"><span class="toc-number">3.7.</span> <span class="toc-text">输入格式</span></a></li></ol></li></ol>	
+        </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>
